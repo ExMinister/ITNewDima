@@ -1,0 +1,9 @@
+﻿<Application x:Class="IT_Department.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:IT_Department"
+             StartupUri="View/MainWindow.xaml">
+    <Application.Resources>
+         <ResourceDictionary Source="Style/StyleMainWindow.xaml"></ResourceDictionary>
+    </Application.Resources>
+</Application>
