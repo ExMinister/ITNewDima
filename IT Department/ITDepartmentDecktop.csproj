@@ -12,11 +12,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ModelsTable\IT Department-ModelsTable.csproj" />
+    <Folder Include="Accept\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Accept\" />
+    <ProjectReference Include="..\ModelsTable\ITDepartmentModelsTable.csproj" />
   </ItemGroup>
 
 </Project>
