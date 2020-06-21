@@ -19,7 +19,7 @@ namespace IT_Department.ViewModels
         {
             
             mainWindow = Application.Current.MainWindow as MainWindow ?? throw new System.NullReferenceException("Не удалось получить экземпляр главного окна");
-            mainWindow.Loaded += MainWindow_Loaded;
+            //mainWindow.Loaded += MainWindow_Loaded;
 
             logical = new LogicalView(this);
             logical.UpdateDepartament();
@@ -27,11 +27,11 @@ namespace IT_Department.ViewModels
 
         }
 
-        private void MainWindow_Loaded(object sender, RoutedEventArgs e)
-        {
-            this.dataGrid = mainWindow.DataGridMainView;
-            logical.UpdateDataGridColumns(this.dataGrid);
-        }
+        //private void MainWindow_Loaded(object sender, RoutedEventArgs e)
+        //{
+        //    this.dataGrid = mainWindow.DataGridMainView;
+        //    logical.UpdateDataGridColumns(this.dataGrid);
+        //}
 
         public IEnumerable<TreeViewItem> ThTreeViewItems
         {

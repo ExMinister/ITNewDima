@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>IT_Department</RootNamespace>
     <UseWPF>true</UseWPF>
   </PropertyGroup>
@@ -13,6 +13,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ModelsTable\IT Department-ModelsTable.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Accept\" />
   </ItemGroup>
 
 </Project>
