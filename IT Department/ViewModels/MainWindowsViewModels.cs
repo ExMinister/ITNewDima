@@ -1,8 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using IT_Department.Data.MainWindow;
+using ModelsTable;
+using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
-using IT_Department.Data.MainWindow;
-using ModelsTable;
+using System.Windows.Input;
 
 namespace IT_Department.ViewModels
 {
@@ -14,6 +15,10 @@ namespace IT_Department.ViewModels
         private DataGrid dataGrid;
         private IEnumerable<Departament> _departament = new List<Departament>();
         private IEnumerable<UserDepartament> _userDepartaments = new List<UserDepartament>();
+
+
+        private ICommand OpenCommandCompData;
+        private ICommand OpenCommandOrgTexnical;
 
         public MainWindowsViewModels()
         {
@@ -55,6 +60,26 @@ namespace IT_Department.ViewModels
         {
             get => _userDepartaments;
             set { _userDepartaments = value; OnPropertyChanged(nameof(UserDepartaments)); }
+        }
+
+
+        public ICommand OpenWindowsCompData {
+            get
+            {
+                if(this.OpenCommandCompData == null)
+                    this.OpenCommandCompData = new CommandMainWindow();
+                return this.OpenCommandCompData;
+            }
+        }
+
+        public ICommand OpenWindowsOrgTexnical
+        {
+            get
+            {
+                if (this.OpenCommandOrgTexnical == null)
+                    this.OpenCommandOrgTexnical = new CommandOpenOrgtexnical();
+                return this.OpenCommandOrgTexnical;
+            }
         }
     }
 }

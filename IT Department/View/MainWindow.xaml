@@ -52,15 +52,12 @@
                 <TreeViewItem Header="Иванов Александр Наркошевич"></TreeViewItem>
                 <TreeViewItem Header="Иванов Александр Наркошевич"></TreeViewItem>
             </TreeViewItem>
-            <!--<Label Content="Экономический отдел" HorizontalAlignment="Left" VerticalAlignment="Center" Height="30" Width="163"/>
-            <Label Content="Иванов" HorizontalAlignment="Left" VerticalAlignment="Center" Height="30" Width="66"/>
-            <Label Content="Петров" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="120"/>-->
         </TreeView>
         <!--#endregion-->
 
         <!--#region TabControl -->
         <TabControl Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2">
-            <TabItem Header="Сотрудник" Margin="-2,-2,-64,0">
+            <TabItem Header="Сотрудник">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Style="{StaticResource UserGridStyle}" />
@@ -99,72 +96,65 @@
                     </StackPanel>
 
                     <DockPanel Grid.Column="3">
-                       <Image DockPanel.Dock="Top" Source="sNRQqYvRDZE.jpg" MaxHeight="180"></Image>
-                        <Button DockPanel.Dock="Bottom" Content="Компьютер сотрудника" VerticalAlignment="Bottom" Margin="0,15" />
-                        <Button DockPanel.Dock="Bottom" VerticalAlignment="Bottom" Content="Оргтехника сотрудника" />
+                       <Image DockPanel.Dock="Top" Source="Ресурсы/sNRQqYvRDZE.jpg" MaxHeight="180" />
+                       <Button DockPanel.Dock="Bottom" Content="Компьютер сотрудника" Command="{Binding OpenWindowsCompData}" VerticalAlignment="Bottom" Margin="0,15" />
+                        <Button DockPanel.Dock="Bottom" VerticalAlignment="Bottom" Command="{Binding OpenWindowsOrgTexnical}" Content="Оргтехника сотрудника" />
                     </DockPanel>
 
-                    <!--<TextBox HorizontalAlignment="Left" Margin="10,40,0,0" Text="Name" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="20"/>
-                    <TextBox HorizontalAlignment="Left" Margin="10,95,0,0" Text="Дмитрий" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-                    <TextBox HorizontalAlignment="Left" Margin="10,148,0,0" Text="Федин" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-                    <TextBox HorizontalAlignment="Left" Margin="10,202,0,0" Text="Александрович" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-                    <TextBox HorizontalAlignment="Left" Margin="10,255,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-                    <TextBox HorizontalAlignment="Left" Margin="10,306,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-                    <TextBox HorizontalAlignment="Left" Margin="221,40,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-                    <TextBox HorizontalAlignment="Left" Margin="221,95,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-                    <TextBox HorizontalAlignment="Left" Margin="221,148,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-                    <Label Content="ID пользователя" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="30" Width="120"/>
-                    <Label Content="Имя" HorizontalAlignment="Left" Margin="10,65,0,0" VerticalAlignment="Top" Height="30" Width="120"/>
-                    <Label Content="Фамилия" HorizontalAlignment="Left" Margin="10,118,0,0" VerticalAlignment="Top" Height="30" Width="120"/>
-                    <Label Content="Отчество" HorizontalAlignment="Left" Margin="10,171,0,0" VerticalAlignment="Top" Height="30" Width="120"/>
-                    <Label Content="Дата рождения" HorizontalAlignment="Left" Margin="10,225,0,0" VerticalAlignment="Top" Height="30" Width="120"/>
-                    <Label Content="Номер телефона" HorizontalAlignment="Left" Margin="10,279,0,0" VerticalAlignment="Top" Height="30" Width="120"/>
-                    <Label Content="Факс&#x9;" HorizontalAlignment="Left" Margin="221,10,0,0" VerticalAlignment="Top" Height="30" Width="120"/>
-                    <Label Content="Код комьютера" HorizontalAlignment="Left" Margin="221,65,0,0" VerticalAlignment="Top" Height="30" Width="120"/>
-                    <Label Content="Инвентраный номер" HorizontalAlignment="Left" Margin="221,118,0,0" VerticalAlignment="Top" Height="30" Width="135"/>
-                    <Label Content="Image" HorizontalAlignment="Left" Height="112" Margin="764,22,0,0" VerticalAlignment="Top" Width="108"/>
-                    <Button Content="Изменить запись" HorizontalAlignment="Left" VerticalAlignment="Center" Height="25" Grid.Row="1" Width="112"/>
-                    <Button Content="Удалить сотрудника" HorizontalAlignment="Left" VerticalAlignment="Center" Height="25" Grid.Row="1" Width="144" Margin="241,0,0,0"/>
-                    <Button Content="Обновить" HorizontalAlignment="Left" VerticalAlignment="Center" Height="25" Grid.Row="1" Width="129" Margin="112,0,0,0"/>
-                    <Button Content="Компьютер сотрудника" HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" Width="154" Margin="741,215,0,0"/>
-                    <Button Content="Оргтехника сотрудника" HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" Width="154" Margin="741,264,0,0"/>
-                    <TextBox HorizontalAlignment="Left" Margin="221,202,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="127"/>
-                    <Label Content="Ip" HorizontalAlignment="Left" Margin="221,178,0,0" VerticalAlignment="Top" Height="30" Width="135"/>-->
+                  
                 </Grid>
 
             </TabItem>
-            <TabItem Header="Заявки" Margin="0,-2,-64,0" HorizontalAlignment="Right" Width="136">
+
+            <TabItem Header="Системные администраторы">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition />
-                        <RowDefinition MaxHeight="25" />
+                        <RowDefinition Height="30" />
                     </Grid.RowDefinitions>
-                    <DockPanel Grid.Row="1"/>
-                    <Button Content="Обновить" HorizontalAlignment="Left" VerticalAlignment="Center" Height="25" Grid.Row="1" Width="129" Margin="129,0,0,0"/>
-                    <Button Content="Очистить" HorizontalAlignment="Left" VerticalAlignment="Center" Height="25" Grid.Row="1" Width="148" Margin="864,0,0,0"/>
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="34*"/>
-                            <ColumnDefinition Width="64*"/>
-                            <ColumnDefinition Width="369*"/>
-                        </Grid.ColumnDefinitions>
-                        <TextBox HorizontalAlignment="Center" Margin="0,41,0,0" Text="Заявка 213" TextWrapping="Wrap" VerticalAlignment="Top" Width="126" Grid.ColumnSpan="2"/>
-                        <TextBox HorizontalAlignment="Left" Margin="93,41,0,0" Text="Иванов В.В." TextWrapping="Wrap" VerticalAlignment="Top" Width="156" Grid.Column="1" Grid.ColumnSpan="2"/>
-                        <TextBox HorizontalAlignment="Left" Margin="271,41,0,0" Text="Не работает 1С:Бухгалтерия" TextWrapping="Wrap" VerticalAlignment="Top" Width="172" Grid.Column="2"/>
-                        <TextBox HorizontalAlignment="Left" Margin="121,41,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Grid.Column="2"/>
-                        <Label Content="Номер заявки" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="151" Grid.ColumnSpan="2"/>
-                        <Label Content="Код сотрудника" HorizontalAlignment="Left" Margin="126,10,0,0" VerticalAlignment="Top" Width="151" Grid.Column="2"/>
-                        <Label Content="ФИО сотрудника" HorizontalAlignment="Left" Margin="98,10,0,0" VerticalAlignment="Top" Width="151" Grid.Column="1" Grid.ColumnSpan="2"/>
-                        <Label Content="Описание проблемы" HorizontalAlignment="Left" Margin="277,10,0,0" VerticalAlignment="Top" Width="151" Grid.Column="2"/>
-                        <CheckBox Content="&#xD;&#xA;" HorizontalAlignment="Left" Margin="10,42,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
-                        <TextBox HorizontalAlignment="Left" Margin="443,41,0,0" Text="01.12.2020 15:45" TextWrapping="Wrap" VerticalAlignment="Top" Width="151" Grid.Column="2"/>
-                        <Label Content="Дата и время заявки" HorizontalAlignment="Left" Margin="443,10,0,0" VerticalAlignment="Top" Width="151" Grid.Column="2"/>
-                        <Label Content="Дата и время выполенения" HorizontalAlignment="Left" Margin="594,10,0,0" VerticalAlignment="Top" Width="173" Grid.Column="2"/>
-                        <TextBox HorizontalAlignment="Left" Margin="594,41,0,0" Text="01.12.2020 16:30" TextWrapping="Wrap" VerticalAlignment="Top" Width="156" Grid.Column="2"/>
-                    </Grid>
-                    <Button Content="Добавить заявку" HorizontalAlignment="Left" VerticalAlignment="Center" Height="25" Width="129" Grid.Row="1"/>
-                </Grid>
 
+                    <DataGrid Grid.Row="0" />
+
+                    <DockPanel Grid.Row="1">
+                        <Button Content="Сохранить/Изменить" HorizontalAlignment="Left" Margin="15,5"/>
+                        <Button Content="Удалить"  HorizontalAlignment="Right" Margin="15,5"/>
+                    </DockPanel>
+
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Заявки" HorizontalAlignment="Right">
+               <Grid>
+                   <Grid.RowDefinitions>
+                       <RowDefinition />
+                       <RowDefinition Height="30" />
+                   </Grid.RowDefinitions>
+                    
+                    <DataGrid Grid.Row="0" />
+
+                    <DockPanel Grid.Row="1">
+                        <Button Content="Сохранить/Изменить" HorizontalAlignment="Left" Margin="15,5"/>
+                        <Button Content="Удалить"  HorizontalAlignment="Right" Margin="15,5"/>
+                    </DockPanel>
+
+               </Grid>
+            </TabItem>
+           
+            <TabItem Header="Склад">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition Height="30" />
+                    </Grid.RowDefinitions>
+
+                    <DataGrid Grid.Row="0" />
+
+                    <DockPanel Grid.Row="1">
+                        <Button Content="Сохранить/Изменить" HorizontalAlignment="Left" Margin="15,5"/>
+                        <Button Content="Удалить"  HorizontalAlignment="Right" Margin="15,5"/>
+                    </DockPanel>
+
+                </Grid>
             </TabItem>
         </TabControl>
         <!--#endregion-->
